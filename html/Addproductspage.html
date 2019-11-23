@@ -1,0 +1,118 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Web proj1</title>
+<link rel="stylesheet" type="text/css" href="../css/form-labels-on-top.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+
+	<br><br><br>
+<div  class='main-content img-responsive' id="col" style="height:'50%'; width:'50%'" align='center'>
+<h2>Add Products</h2>
+<form class="form-labels-on-top" id='div1' runat='server'>
+
+  <div class="dropdown" id='dropdown'>
+    <button class="btn btn-default dropdown-toggle showItem"id='showItem' type="button" data-toggle="dropdown">Category
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+   
+      <li class="dropdown-submenu" id='select'>
+       <h6 class="test" tabindex="-1" > Men <span class="caret"></span></h6>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Clothing</a></li>
+          <li><a tabindex="-1" href="#">Footwear</a></li>
+          <li><a tabindex="-1" href="#">Accessories</a></li>
+         <li><a tabindex="-1" href="#">Wallets and Bags</a></li>
+       
+        </ul>
+      </li>
+      <li class="dropdown-submenu" id='select'>
+        <h6 class="test" tabindex="-1" >Women<span class="caret"></span></h6>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Clothing</a></li>
+          <li><a tabindex="-1" href="#">Footwear</a></li>
+          <li><a tabindex="-1" href="#">Accessories</a></li>
+           <li><a tabindex="-1" href="#">Handbags and Backpacks</a></li>
+          <li><a tabindex="-1" href="#">Makeup and Personal Care</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu" id='select'>
+        <h6 class="test" tabindex="-1">Kids<span class="caret"></span></h6>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Clothing</a></li>
+          <li><a tabindex="-1" href="#">Footwear</a></li>
+          <li><a tabindex="-1" href="#">Accessories</a></li>
+         <li><a tabindex="-1" href="#">Backpacks</a></li>
+           <li><a tabindex="-1" href="#">Toys</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu" id='select'>
+        <h6 class="test" tabindex="-1" >Electronics<span class="caret"></span></h6>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Laptops</a></li>
+          <li><a tabindex="-1" href="#">Mobiles</a></li>
+         <li><a tabindex="-1" href="#">Cameras</a></li>
+           <li><a tabindex="-1" href="#">Speakers</a></li>
+        </ul>
+      </li>
+      <li class="dropdown-submenu" id='select'>
+        <h6 class="test" tabindex="-1" >Home & Kitchen<span class="caret"></span></h6>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Home decor</a></li>
+          <li><a tabindex="-1" href="#">Kitchen Appliances</a></li>
+          <li><a tabindex="-1" href="#">Home furnishing</a></li>
+         <li><a tabindex="-1" href="#">Home storage</a></li>
+           <li><a tabindex="-1" href="#">Garden and outdoor</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <br>
+</form>
+</div>
+<br>
+<hr>
+<br>
+<center>
+<div id="div2" id="col">
+<h2>List Of Items</h2>
+<input type="text" id="search" placeholder="&#128269 Search">
+</div>
+</center>
+
+     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC5RvGKEbqpmEy_HUWszL0r0JriOp8fjII",
+    authDomain: "e-commerce-86481.firebaseapp.com",
+    databaseURL: "https://e-commerce-86481.firebaseio.com",
+    projectId: "e-commerce-86481",
+    storageBucket: "e-commerce-86481.appspot.com",
+    messagingSenderId: "93173132857",
+    appId: "1:93173132857:web:214203f3d7624dacaa67e8",
+    measurementId: "G-X1GDSZS4VM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+</script>
+<script src="../js/Add products.js"></script>
+
+</body>
+</html>
