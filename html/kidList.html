@@ -7,6 +7,33 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/Lists.css">  
+    <style>
+
+.dropdown-submenu {
+  position: relative;
+}
+.test:hover {
+  background-color: #ddd;
+ text-decoration: none;
+  color: black;
+}
+.dropdown-menu li h6:hover{
+  background-color: black;
+  color: #ecdbff;
+}
+.dropdown-menu > li:hover ul{
+     display: block;
+}
+.dropdown-menu li>a{
+  text-decoration: none;
+  color: white
+}
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+</style>
 </head>
 <body>
  <section id="nav-bar">
@@ -96,7 +123,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="outer-div">
-          <div class="inner-div"id='cloth' style="	background-image:url(../img/M4.jpg)">
+          <div class="inner-div"id='cloth' style="	background-image:url(../img/product/kid.jpg)">
             <h1 class="zoom-box-text">CLOTHING</h1>
           </div>
         </div>
@@ -104,7 +131,7 @@
 
       <div class="col-md-6">
         <div class="outer-div">
-          <div class="inner-div"id='foot'style="	background-image:url(../img/cat2.jpg)">
+          <div class="inner-div"id='foot'style="	background-image:url(../img/catki2.jpeg)">
             <h1 class="zoom-box-text">FOOTWEAR</h1>
           </div>
         </div>
@@ -113,7 +140,7 @@
     <div class="row">
      <div class="col-md-6">
         <div class="outer-div" >
-          <div class="inner-div" id='acc'style="	background-image:url(../img/cat3.jpg)">
+          <div class="inner-div" id='acc'style="	background-image:url(../img/catki3.jpeg)">
             <h1 class="zoom-box-text">ACCESSORIES </h1>
           </div>
         </div>
@@ -121,19 +148,28 @@
 
      <div class="col-md-6">
         <div class="outer-div">
-          <div class="inner-div"id='bag'style="	background-image:url(../img/cat4.jpg)">
-            <h1 class="zoom-box-text">WALLETS AND HANDBAGS </h1>
+          <div class="inner-div"id='bag'style="	background-image:url(../img/catki4.jpeg)">
+            <h1 class="zoom-box-text">BACKPACKS</h1>
           </div>
         </div>
       </div>
   </div>
+  <div class="row">
+     <div class="col-md-6">
+        <div class="outer-div" >
+          <div class="inner-div" id='toys'style="  background-image:url(../img/product/img5.jpeg)">
+            <h1 class="zoom-box-text" >TOYS</h1>
+          </div>
+        </div>
+      </div>
+    </div>
      </div>
      <div class="container mt-5" id='divdis'></div>
      <div class="container mt-5" id='divdis1' style="display: none;">
       <form class="form-labels-on-top" id='div1' runat='server'>
 </form>  </div>     
      <script type="text/javascript" src='../js/form.js'></script>
-     <script src='../js/menList.js'></script>
+     <script src='../js/kidList.js'></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

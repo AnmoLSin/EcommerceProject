@@ -1,5 +1,28 @@
 /* CSS Document */
-
+.dropdown-submenu {
+  position: relative;
+}
+.test:hover {
+  background-color: #ddd;
+ text-decoration: none;
+  color: black;
+}
+.dropdown-menu li h6:hover{
+  background-color: black;
+  color: #ecdbff;
+}
+.dropdown-menu > li:hover ul{
+     display: block;
+}
+.dropdown-menu li>a{
+  text-decoration: none;
+  color: white
+}
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
 .navbar,.dropdown-menu ,.dropdown-menu li {
   background-color: #000000;
 }
@@ -7,7 +30,7 @@
   color: #ecf0f1;
 }
 .dropdown-menu li>a:hover,.dropdown-submenu h6:hover {
-  color: blue;
+  color: blue; 
 }
 .navbar {
   background-color: #000000;
@@ -181,17 +204,7 @@
 .outer-div{
 	height: 350px;
 
-
-}
-.inner-div{
-	height: 300px;
-	width: 100%;
-	background-size: cover;
-	background-position: center;
-	transition: all 0.5s ease;
-}
-.inner-div:hover{
-	transform: scale(0.9)
+		
 }
 .inner-div1{
 	height: 300px;
@@ -202,7 +215,7 @@
 	background-image:url(../img/for-men.jpg)
 }
 .inner-div1:hover{
-	transform: scale(0.9)
+	transform: scale(1.2)
 }
 .inner-div2{
 	height: 300px;
@@ -213,7 +226,7 @@
 	background-image:url(../img/for-women.jpg)
 }
 .inner-div2:hover{
-	transform: scale(0.9)
+	transform: scale(1.2)
 }
 .inner-div3{
   height: 300px;
@@ -225,7 +238,7 @@
 
 }
 .inner-div3:hover{
-  transform: scale(0.9);
+  transform: scale(1.2);
 }
 .product-card:hover{
     box-shadow: 5px 5px 5px 5px #888888;
@@ -273,7 +286,7 @@ a{
   background-image:url(../img/l.jpg)
 }
 .inner-div4:hover{
-  transform: scale(0.9)
+  transform: scale(1.2)
 }
 .inner-div5{
   margin-left: 50%;
@@ -285,7 +298,17 @@ a{
    background-image:url(../img/home.jpg)
 }
 .inner-div5:hover{
-  transform: scale(0.9)
+  transform: scale(1.2)
+}
+.inner-div{
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+}
+.inner-div:hover{
+  transform: scale(1.2)
 }
 .zoom-box-text{
 	text-align: center;
@@ -310,7 +333,7 @@ a{
 	border: none;
 	text-align: center;
 	position: relative;
-
+	
 }
 
 .product-card .card-title{

@@ -1,18 +1,19 @@
-var cloth=document.getElementById('cloth');
-var acc=document.getElementById('acc');
-var foot=document.getElementById('foot');
-var bag=document.getElementById('bag');
+var decor=document.getElementById('decor');
+var app=document.getElementById('app');
+var furnishing=document.getElementById('furnishing');
+var storage=document.getElementById('storage');
+var garden=document.getElementById('garden');
   var divdis1=document.getElementById('divdis1');
 
 var products=JSON.parse(localStorage.products);
 
-//list for clothing
-cloth.addEventListener('click',function(){
+//list for decor
+laptop.addEventListener('click',function(){
   for(var i=0;i<products.length;i++)
   {
-    if(products[i].Category==' Men ')
+    if(products[i].Category==' Home & Kitchen  ')
     {
-      if(products[i].Subcategory=='Clothing')
+      if(products[i].Subcategory=='Home decor')
       {
         if(i==0)
         {
@@ -91,13 +92,98 @@ document.getElementById('del1').addEventListener("click",function(event)
 
   });
 
-//list for footwear
-foot.addEventListener('click',function(){
+//list for appliances
+app.addEventListener('click',function(){
   for(var i=0;i<products.length;i++)
   {
-    if(products[i].Category==' Men ')
+    if(products[i].Category==' Home & Kitchen  ')
     {
-      if(products[i].Subcategory=='Footwear')
+      if(products[i].Subcategory=='Kitchen Appliances')
+      {
+        if(i==0)
+        {
+        divdis.appendChild(back);
+        divdis.appendChild(list);}
+count++;
+if(count==1)
+document.getElementById('list').innerHTML='';
+  var item=document.createElement("li");
+item.setAttribute('style','display:inline-block;padding: 10px 10px');
+item.setAttribute('id',i);
+  list.appendChild(item);
+  var delete_btn=document.createElement("button");
+delete_btn.setAttribute("id","del1");
+
+var divformDiv=document.createElement('div');
+divformDiv.setAttribute('style','background-color:white');
+divformDiv.setAttribute('id',i);
+
+item.appendChild(divformDiv);
+var image=document.createElement('img');
+image.setAttribute('style','width:250;height:250');
+var edit_btn=document.createElement("button");
+edit_btn.setAttribute("class","edit");
+edit_btn.innerHTML="Edit";
+delete_btn.innerHTML="Delete";
+image.setAttribute('src',products[i].img);
+ divformDiv.appendChild(image);
+  insertBlankLine(divformDiv);
+var name=document.createTextNode("Name: "+products[i].pro_name);
+  divformDiv.appendChild(name);
+  insertBlankLine(divformDiv);
+  var desc=document.createTextNode("Description: "+products[i].pro_desc);
+  divformDiv.appendChild(desc);
+  insertBlankLine(divformDiv);
+    var price=document.createTextNode("Price: "+products[i].pro_price);
+  divformDiv.appendChild(price);
+  insertBlankLine(divformDiv);
+  var qty=document.createTextNode("Qty: "+products[i].pro_qty);
+  divformDiv.appendChild(qty);
+  insertBlankLine(divformDiv);
+divformDiv.appendChild(edit_btn);
+divformDiv.innerHTML+=" ";
+divformDiv.appendChild(delete_btn);
+
+
+document.getElementById('divform').style.display='none';
+document.getElementById('divdis').style.display='block';
+      }
+      }
+      
+
+    }
+    Array.from(document.getElementsByClassName('edit')).forEach(function(element) {
+element.addEventListener("click",function(event)
+{
+     targetParent = event.target.parentNode;
+     selectedProductIndex = getProductIndex(parseInt(targetParent.id));
+     console.log(selectedProductIndex);
+create_form(products[selectedProductIndex].pro_name,products[selectedProductIndex].pro_desc,products[selectedProductIndex].pro_price,products[selectedProductIndex].pro_qty,products[selectedProductIndex].img);
+
+})});
+document.getElementById('del1').addEventListener("click",function(event)
+{
+                                            targetParent = event.target.parentNode;
+                                           selectedProductIndex= getProductIndex(parseInt(targetParent.id));
+                                           console.log(targetParent.id);
+                                           removeFromProducts(selectedProductIndex);
+                                           targetParent.parentNode.removeChild(targetParent);
+                                      }
+                            );
+    if(!count)
+      alert('No items in this field');
+    else count=0;
+
+
+  });
+
+//list for mobile
+furnishing.addEventListener('click',function(){
+  for(var i=0;i<products.length;i++)
+  {
+    if(products[i].Category==' Home & Kitchen  ')
+    {
+      if(products[i].Subcategory=='Home furnishing')
       {
 
         divdis.appendChild(back);
@@ -173,13 +259,13 @@ document.getElementById('del1').addEventListener("click",function(event)
   });
 
 
-//list for accesories
-acc.addEventListener('click',function(){
+//list for storage
+storage.addEventListener('click',function(){
   for(var i=0;i<products.length;i++)
   {
-    if(products[i].Category==' Men ')
+    if(products[i].Category==' Home & Kitchen  ')
     {
-      if(products[i].Subcategory=='Accessories')
+      if(products[i].Subcategory=='Home Storage')
       {
         
       
@@ -256,13 +342,13 @@ document.getElementById('del1').addEventListener("click",function(event)
 
   });
 
-//list for bags
-bag.addEventListener('click',function(){
+//list for garden
+garden.addEventListener('click',function(){
   for(var i=0;i<products.length;i++)
   {
-    if(products[i].Category==' Men ')
+    if(products[i].Category==' Home & Kitchen  ')
     {
-      if(products[i].Subcategory=='Wallets and Bags')
+      if(products[i].Subcategory=='Garden and outdoor')
       {
       
        

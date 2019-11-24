@@ -1,18 +1,18 @@
-var cloth=document.getElementById('cloth');
-var acc=document.getElementById('acc');
-var foot=document.getElementById('foot');
-var bag=document.getElementById('bag');
+var laptop=document.getElementById('laptop');
+var mob=document.getElementById('mob');
+var cam=document.getElementById('cam');
+var speaker=document.getElementById('speaker');
   var divdis1=document.getElementById('divdis1');
 
 var products=JSON.parse(localStorage.products);
 
-//list for clothing
-cloth.addEventListener('click',function(){
+//list for laptop
+laptop.addEventListener('click',function(){
   for(var i=0;i<products.length;i++)
   {
-    if(products[i].Category==' Men ')
+    if(products[i].Category==' Electronics ')
     {
-      if(products[i].Subcategory=='Clothing')
+      if(products[i].Subcategory=='Laptops')
       {
         if(i==0)
         {
@@ -91,13 +91,13 @@ document.getElementById('del1').addEventListener("click",function(event)
 
   });
 
-//list for footwear
-foot.addEventListener('click',function(){
+//list for mobile
+mob.addEventListener('click',function(){
   for(var i=0;i<products.length;i++)
   {
-    if(products[i].Category==' Men ')
+    if(products[i].Category==' Electronics ')
     {
-      if(products[i].Subcategory=='Footwear')
+      if(products[i].Subcategory=='Mobiles')
       {
 
         divdis.appendChild(back);
@@ -173,13 +173,13 @@ document.getElementById('del1').addEventListener("click",function(event)
   });
 
 
-//list for accesories
-acc.addEventListener('click',function(){
+//list for cameras
+cam.addEventListener('click',function(){
   for(var i=0;i<products.length;i++)
   {
-    if(products[i].Category==' Men ')
+    if(products[i].Category==' Electronics ')
     {
-      if(products[i].Subcategory=='Accessories')
+      if(products[i].Subcategory=='Cameras')
       {
         
       
@@ -256,13 +256,13 @@ document.getElementById('del1').addEventListener("click",function(event)
 
   });
 
-//list for bags
-bag.addEventListener('click',function(){
+//list for speakers
+speaker.addEventListener('click',function(){
   for(var i=0;i<products.length;i++)
   {
-    if(products[i].Category==' Men ')
+    if(products[i].Category==' Electronics ')
     {
-      if(products[i].Subcategory=='Wallets and Bags')
+      if(products[i].Subcategory=='Speakers')
       {
       
        

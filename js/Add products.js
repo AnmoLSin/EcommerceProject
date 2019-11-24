@@ -1,4 +1,3 @@
-
 var divform= document.getElementById("div1");
 var divdis=document.getElementById("div2");
 var pid;
@@ -70,7 +69,7 @@ var d=document.getElementById("desc").value;
 var p=document.getElementById("price").value;
 var q=document.getElementById("qty").value;
 var image=document.getElementById('img').value.split('\\').pop().split('/').pop();
-var firstFile='F:\\Final_eCommerce\\img\\product\\'+image;
+var firstFile='C:\\Users\\ramesh\\Documents\\uca\\web\\ecommerce\\img\\product\\'+image;
 if(flag==0)
 {
   var pro={Id:pid,pro_name:n,pro_desc:d,pro_price:p,pro_qty:q,img:firstFile,Category:category,Subcategory:subcategory};
@@ -224,11 +223,12 @@ document.getElementById('edit').addEventListener("click",function(event)
      targetParent = event.target.parentNode;
      selectedProductIndex = getProductIndex(parseInt(targetParent.id));
      flag=1;
+document.getElementById('showItem').innerHTML=products[selectedProductIndex-1].Subcategory;
 document.getElementById('name').value=products[selectedProductIndex-1].pro_name;
 document.getElementById('desc').value=products[selectedProductIndex-1].pro_desc;
 document.getElementById('price').value=products[selectedProductIndex-1].pro_price;
 document.getElementById('qty').value=products[selectedProductIndex-1].pro_qty;
-document.getElementById('img').value=products[selectedProductIndex-1].img;
+//document.getElementById('img').value=products[selectedProductIndex-1].img;
 });
 delete_btn.addEventListener("click",function(event)
                                       {
@@ -401,3 +401,4 @@ search_btn.addEventListener("keyup",function () {
             li[j].style.display = "block";
         }
     });
+
