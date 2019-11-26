@@ -69,7 +69,7 @@ var d=document.getElementById("desc").value;
 var p=document.getElementById("price").value;
 var q=document.getElementById("qty").value;
 var image=document.getElementById('img').value.split('\\').pop().split('/').pop();
-var firstFile='C:\\Users\\ramesh\\Documents\\uca\\web\\ecommerce\\img\\product\\'+image;
+var firstFile='F:\\Final_eCommerce\\img\\product\\'+image;
 if(flag==0)
 {
   var pro={Id:pid,pro_name:n,pro_desc:d,pro_price:p,pro_qty:q,img:firstFile,Category:category,Subcategory:subcategory};
@@ -162,7 +162,7 @@ function put_array(pro)
       if(flag==0)
        products[pid-1]=Object.assign({},pro);
      else
-      products[selectedProductIndex]=Object.assign({},pro);
+      products[selectedProductIndex-1]=Object.assign({},pro);
         storeProducts(products);
         print(pro);
 
@@ -182,6 +182,7 @@ var delete_btn=document.createElement("button");
 delete_btn.setAttribute("id","del1");
 var item=document.createElement("li");
 item.setAttribute('style','display:inline-block;padding: 10px 10px');
+if(flag==0)
 list.appendChild(item);
 var showDiv=document.createElement('div');
 showDiv.setAttribute('style','background-color:white');
@@ -217,7 +218,7 @@ showDiv.appendChild(delete_btn);
 if(flag==0)
 divdis.appendChild(list);
 else
-divdis.replaceChild(list,targetParent);
+targetParent.parentNode.replaceWith(item);
 document.getElementById('edit').addEventListener("click",function(event)
 {
      targetParent = event.target.parentNode;
@@ -255,8 +256,11 @@ delete_btn.addEventListener("click",function(event)
 }
 function removeFromProducts(selectedProductIndex)
 {
-    products.splice(selectedProductIndex,1);
-    console.log(products);
+    products.splice(selectedProductIndex-1,1);
+    storeProducts(products);
+    products=getStoredProducts();
+localStorage.id--;
+pid=localStorage.id;
 }
 function create_form(n,d,p,q,i)
 {
@@ -354,10 +358,7 @@ btn.setAttribute('class','form-row');
 var button = document.createElement('input');
         button.setAttribute('type', 'button');
         button.setAttribute('ID', 'submit');
-        if(flag==0)
         button.setAttribute('value', 'Submit');
-        else if(flag==1)
-            button.setAttribute('value', 'Edit');
         var button1 = document.createElement('input');
         button1.setAttribute('type', 'button');
         button1.setAttribute('ID', 'cancel');
@@ -373,9 +374,11 @@ showList();
 //submit form validation
 button.addEventListener("click",function()
 {
+  if(flag==1)
+      button.setAttribute('value', 'Edit');
 valid();
 //divform.innerHTML='';
-txt_name.value=txt_desc.value=txt_price.value=txt_qty.value=pic_input.value=subcategory=category='';
+txt_name.value=txt_desc.value=txt_price.value=txt_qty.value=pic_input.value='';
 var span=document.createElement('span');
 span.setAttribute('class','caret');
 document.getElementById('showItem').innerHTML='Category ';
@@ -400,5 +403,6 @@ search_btn.addEventListener("keyup",function () {
         else
             li[j].style.display = "block";
         }
-    });
 
+    }
+    );

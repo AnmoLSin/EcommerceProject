@@ -30,7 +30,7 @@
   color: #ecf0f1;
 }
 .dropdown-menu li>a:hover,.dropdown-submenu h6:hover {
-  color: blue; 
+  color: blue;
 }
 .navbar {
   background-color: #000000;
@@ -204,20 +204,23 @@
 .outer-div{
 	height: 350px;
 
-		
+
 }
 .inner-div1{
+  border-radius: 20px;
 	height: 300px;
 	width: 100%;
 	background-size: cover;
 	background-position: center;
 	transition: all 0.5s ease;
 	background-image:url(../img/for-men.jpg)
+
 }
 .inner-div1:hover{
-	transform: scale(1.2)
+	transform: scale(1.06)
 }
 .inner-div2{
+  border-radius: 20px;
 	height: 300px;
 	width: 100%;
 	background-size: cover;
@@ -226,9 +229,10 @@
 	background-image:url(../img/for-women.jpg)
 }
 .inner-div2:hover{
-	transform: scale(1.2)
+	transform: scale(1.06)
 }
 .inner-div3{
+  border-radius: 20px;
   height: 300px;
   width: 100%;
   background-size: cover;
@@ -238,7 +242,7 @@
 
 }
 .inner-div3:hover{
-  transform: scale(1.2);
+  transform: scale(1.06);
 }
 .product-card:hover{
     box-shadow: 5px 5px 5px 5px #888888;
@@ -278,6 +282,7 @@ a{
   width: 150px;
 }
 .inner-div4{
+  border-radius: 20px;
   height: 300px;
   width: 100%;
   background-size: cover;
@@ -286,9 +291,10 @@ a{
   background-image:url(../img/l.jpg)
 }
 .inner-div4:hover{
-  transform: scale(1.2)
+  transform: scale(1.06)
 }
 .inner-div5{
+  border-radius: 20px;
   margin-left: 50%;
   height: 300px;
   width: 100%;
@@ -298,9 +304,10 @@ a{
    background-image:url(../img/home.jpg)
 }
 .inner-div5:hover{
-  transform: scale(1.2)
+  transform: scale(1.06)
 }
 .inner-div{
+  border-radius: 20px;
   height: 300px;
   width: 100%;
   background-size: cover;
@@ -308,7 +315,7 @@ a{
   transition: all 0.5s ease;
 }
 .inner-div:hover{
-  transform: scale(1.2)
+  transform: scale(1.06)
 }
 .zoom-box-text{
 	text-align: center;
@@ -327,13 +334,15 @@ a{
 {
  width: 400px; /* You can set the dimensions to whatever you want */
     height: 300px;
-    object-fit: cover;}
+    object-fit: cover;
+    border-radius: 20px;
+  }
 
 .product-card{
 	border: none;
 	text-align: center;
 	position: relative;
-	
+
 }
 
 .product-card .card-title{
@@ -433,4 +442,18 @@ footer{
 .fa-heart{
   margin: 3px;
   color: red;
+}
+.floating {
+    animation-name: floating;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+      margin: auto;
+  width: 60%;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }
 }

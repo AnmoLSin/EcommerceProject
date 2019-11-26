@@ -12,9 +12,12 @@
     <link  rel="stylesheet" href="../css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="../css/style1.css">
+    <script src="F:\Final_eCommerce\js\smooth-scroll.js"></script>
 <style>
-
+ body{
+   background-color: #dcdcdc;
+ }
 .dropdown-submenu {
   position: relative;
 }
@@ -60,7 +63,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="aa.html">Home<span class="sr-only">(current)</span></a>
             </li>
              <li class="nav-item dropdown">
        <div class="dropdown">
@@ -139,8 +142,8 @@
   <div class="row">
     <div class="col-md-6">
       <div class="outer-div">
-        <div class="inner-div1" onclick="window.location.assign('menList.html')">
-          <h1 class="zoom-box-text" id='men' >FOR MEN </h1>
+        <div class="inner-div1" onclick="window.location.assign('menList.htm')">
+          <h2 class="zoom-box-text" id='men' >FOR MEN </h2>
         </div>
       </div>
     </div>
@@ -148,7 +151,7 @@
     <div class="col-md-6">
       <div class="outer-div">
         <div class="inner-div2"onclick="window.location.assign('womenList.html')">
-          <h1 class="zoom-box-text" id='women'>FOR WOMEN </h1>
+          <h2 class="zoom-box-text" id='women'>FOR WOMEN </h2>
         </div>
       </div>
     </div>
@@ -157,15 +160,15 @@
    <div class="col-md-6">
       <div class="outer-div" >
         <div class="inner-div3"onclick="window.location.assign('kidList.html')">
-          <h1 class="zoom-box-text" id="kid">KIDS </h1>
+          <h2 class="zoom-box-text" id="kid">KIDS </h2>
         </div>
       </div>
     </div>
 
    <div class="col-md-6">
       <div class="outer-div">
-        <div class="inner-div4"onclick="window.location.assign('elecList.html')">
-          <h1 class="zoom-box-text" id="elec">ELECTRONICS </h1>
+        <div class="inner-div4"onclick="window.location.assign('electList.html')">
+          <h2 class="zoom-box-text" id="elec">ELECTRONICS </h2>
         </div>
       </div>
     </div>
@@ -174,7 +177,7 @@
     <div class="col-md-6">
       <div class="outer-div">
         <div class="inner-div5"onclick="window.location.assign('homeList.html')">
-        <h1 class="zoom-box-text" id='home'>HOME DECOR & KITCHEN</h1>
+        <h2 class="zoom-box-text" id='home'>HOME DECOR & KITCHEN</h2>
         </div>
       </div>
     </div>
@@ -620,7 +623,7 @@
 </script>
 
    <script>
-
+var scroll = new SmoothScroll('a[href*="#"]');
   $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
@@ -653,7 +656,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     document.getElementById('check').innerHTML='ADD PRODUCTS';
-  document.getElementById('check').setAttribute('onclick','window.location.assign("Addproductspage.html");');
+  document.getElementById('check').setAttribute('onclick','console.log(1);window.location.assign("Addproductspage.html");');
   var logOut=document.createElement('button');
   logOut.innerHTML='LOGOUT';
   logOut.setAttribute('class',"btn btn-outline-success my-2 my-sm-0");
@@ -662,10 +665,10 @@ logOut.setAttribute('onclick','func()');
   } else {
     // No user is signed in.
      document.getElementById('check').innerHTML='SIGNUP';
-  document.getElementById('check').setAttribute('onclick','window.location.href="signup.html"');
+  document.getElementById('check').setAttribute('onclick','console.log(1);window.location.href="signup.html"');
   }
 });
-
+if(!localStorage.id)
      localStorage.setItem('id','0');
 function change()
 {
